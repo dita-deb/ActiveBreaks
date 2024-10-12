@@ -1,0 +1,24 @@
+Hardware List
+Microcontroller: Arudino Mega 2560
+LEDs
+Resistors
+Buzzer
+(Optional) Button
+Wires
+
+Why Choose the Arduino Mega 2560?
+- More I/O Pins: 54 digital pins and 16 analog inputs, perfect if you want to expand the hardware (e.g., multiple LEDs or sensors).
+- Larger Memory: 256 KB of flash memory, suitable if you need to add more code or libraries.
+- Better Serial Communication: 4 hardware serial ports, allowing flexible communication with multiple peripherals.
+
+
+Hardware Implementation using Arduino Mega 2560
+Connections:
+LED: Connect to pin 13 (with a 220-ohm resistor).
+Buzzer: Connect to pin 8.
+Optional Button: Connect a button to pin 7 (with a pull-down resistor) to allow snoozing alerts.
+
+Wiring Example:
+LED: Pin 13 → Resistor → LED (positive) → GND
+Buzzer: Pin 8 → Buzzer (positive) → GND
+Button: Pin 7 → Button → GND

@@ -1,0 +1,6 @@
+Install Development Tools:
+
+- Install Arduino IDE for microcontroller programming.
+- Install Python (if not already installed) to write the activity tracking software.
+    - required python libraries: pip install pynput pyserial
+    

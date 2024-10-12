@@ -1,6 +1,39 @@
-Install Development Tools:
+# Software Setup for ActiveBreaks
 
-- Install Arduino IDE for microcontroller programming.
-- Install Python (if not already installed) to write the activity tracking software.
-    - required python libraries: pip install pynput pyserial
-    
+## Required Software and Libraries:
+1. **Python 3.x** (for tracking activity and sending alerts)
+2. **Arduino IDE** (for programming the Arduino Mega)
+3. **pynput Library** (to track keyboard and mouse events)
+   - Install via pip: `pip install pynput`
+4. **pyserial Library** (for serial communication between Python and Arduino)
+   - Install via pip: `pip install pyserial`
+
+## Software Setup Instructions:
+1. **Install Arduino IDE**:
+   - Download and install from: https://www.arduino.cc/en/software
+   - Select the correct board (Arduino Mega 2560) and port in the IDE.
+
+2. **Write the Arduino Code**:
+   - Upload the sketch to manage LED, buzzer, and button behavior.
+   - Ensure the correct **baud rate** (e.g., 9600) matches the Python script.
+
+3. **Python Script Setup**:
+   - Create a Python script to:
+     - Track keyboard and mouse activity using `pynput`.
+     - Send a serial signal to Arduino for breaks (e.g., `ser.write(b'1')`).
+   - Ensure the script is set to run on **startup** for continuous tracking.
+
+4. **Testing Serial Communication**:
+   - Run a basic Python script to test serial communication:
+     ```python
+     import serial
+     ser = serial.Serial('COM3', 9600)  # Replace 'COM3' with your port
+     ser.write(b'1')
+     ```
+   - Confirm the Arduino responds by lighting the LED or buzzing.
+
+## Troubleshooting:
+- If the Arduino doesn't communicate:
+  - Ensure the correct **COM port** is used.
+  - Restart the Python script and Arduino IDE to reset the connection.
+  - Check for loose hardware connections.

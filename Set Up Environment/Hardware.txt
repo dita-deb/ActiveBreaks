@@ -1,24 +1,30 @@
-Hardware List
-Microcontroller: Arudino Mega 2560
-LEDs
-Resistors
-Buzzer
-(Optional) Button
-Wires
+# Hardware Setup for ActiveBreaks
 
-Why Choose the Arduino Mega 2560?
-- More I/O Pins: 54 digital pins and 16 analog inputs, perfect if you want to expand the hardware (e.g., multiple LEDs or sensors).
-- Larger Memory: 256 KB of flash memory, suitable if you need to add more code or libraries.
-- Better Serial Communication: 4 hardware serial ports, allowing flexible communication with multiple peripherals.
+## Required Components:
+- Arduino Mega 2560
+- 1x LED (Any color, for visual reminders)
+- 1x Buzzer (Piezo buzzer, for sound alerts)
+- 1x Push Button (Optional, for snooze functionality)
+- Jumper Wires (for connections)
+- Breadboard (for easy wiring)
+- USB Cable (for Arduino-computer communication)
 
+## Circuit Diagram:
+1. **LED**: 
+   - Connect the positive leg (longer leg) to Pin 13 on the Arduino.
+   - Connect the negative leg to GND with a 220-ohm resistor in series.
 
-Hardware Implementation using Arduino Mega 2560
-Connections:
-LED: Connect to pin 13 (with a 220-ohm resistor).
-Buzzer: Connect to pin 8.
-Optional Button: Connect a button to pin 7 (with a pull-down resistor) to allow snoozing alerts.
+2. **Buzzer**:
+   - Connect the positive terminal to Pin 12 on the Arduino.
+   - Connect the negative terminal to GND.
 
-Wiring Example:
-LED: Pin 13 → Resistor → LED (positive) → GND
-Buzzer: Pin 8 → Buzzer (positive) → GND
-Button: Pin 7 → Button → GND
+3. **Push Button (Optional)**:
+   - One side of the button to Pin 2 on the Arduino.
+   - The other side to GND.
+   - Use a 10k-ohm pull-up resistor between Pin 2 and VCC to stabilize the signal.
+
+4. **Arduino Connection**:
+   - Connect the Arduino to the computer via a USB cable to enable communication with the Python script.
+
+## Hardware Test:
+- Use the Arduino IDE to upload a simple LED blink sketch to ensure the Arduino and components are connected correctly.

@@ -1,5 +1,5 @@
 # ActiveBreaks
-A user-friendly tool that encourages regular breaks while effectively monitoring focus time to promote healthy work habits. Integrates software application with hardware.
+A user-friendly tool that encourages regular breaks while effectively monitoring focus time to promote healthy work habits. It combines software with hardware to automate reminders, ensuring users maintain productivity without compromising health.
 
 - Problem:
   - Increased Sedentary Behavior: Prolonged screen time leads to health issues like eye strain (Computer Vision Syndrome), fatigue, musculoskeletal disorders, and mental burnout.
@@ -36,7 +36,7 @@ A user-friendly tool that encourages regular breaks while effectively monitoring
     - Buzzer or LED: Alerts the user when it’s time for a break.
     - Button (Optional): A physical snooze button for delaying reminders.
   - Workflow:
-    - Software: A Python script running on the computer tracks user activity (via pynput library).
+    - Software: A Python program using pynput tracks keyboard/mouse usage.
     - Communication: The computer sends a signal to the Arduino/ESP32 via serial communication when a break reminder is triggered.
     - Hardware Response:
       - LED turns on or the buzzer beeps to indicate break time.

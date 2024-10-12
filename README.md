@@ -1,5 +1,5 @@
 # ActiveBreaks
-A user-friendly tool that encourages regular breaks while effectively monitoring focus time to promote healthy work habits.
+A user-friendly tool that encourages regular breaks while effectively monitoring focus time to promote healthy work habits. Integrates software application with hardware.
 
 - Problem:
   - Increased Sedentary Behavior: Prolonged screen time leads to health issues like eye strain (Computer Vision Syndrome), fatigue, musculoskeletal disorders, and mental burnout.
@@ -8,7 +8,7 @@ A user-friendly tool that encourages regular breaks while effectively monitoring
   - Lack of Awareness: People often underestimate how much time they spend at the computer without breaks, leading to physical and mental strain.
 - Solution: ActiveBreaks provides a simple, automated reminder system to track continuous computer usage and alert users when it is time to take a break. By monitoring keyboard and mouse activity, the tool encourages users to take regular breaks to refresh and avoid burnout.
   - Pros:
-    - Health Benefits:
+    - Health Benefits: 
       - Reduces eye strain and prevents Repetitive Strain Injury (RSI).
       - Encourages physical movement, improving posture and circulation.
       - Promotes mental clarity and reduces stress.

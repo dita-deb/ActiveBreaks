@@ -1,57 +1,56 @@
-# activity_tracker.py
-# Script to track user activity and send break reminders to Arduino
-
-import time
 import serial
+import time
 from pynput import mouse, keyboard
 
-# Configuration
-SERIAL_PORT = 'COM3'  # Update this with your Arduino COM port
+# Define constants for serial port and baud rate
+SERIAL_PORT = 'COM6'  # Change this to the correct port for your setup
 BAUD_RATE = 9600
-BREAK_INTERVAL = 600  # Time in seconds before a break reminder (10 minutes)
-check_interval = 5  # Interval to check for activity in seconds
 
-# Serial communication setup
-ser = serial.Serial(SERIAL_PORT, BAUD_RATE, timeout=1)
+# Initialize the serial connection
+try:
+    ser = serial.Serial(SERIAL_PORT, BAUD_RATE, timeout=1)
+except serial.SerialException as e:
+    print(f"Error opening serial port: {e}")
+    ser = None
 
-# Global variables
-last_activity_time = time.time()
-active = True  # Tracks whether the user is active
-
+# Function to handle mouse activity
 def on_activity(x, y):
-    global last_activity_time, active
-    last_activity_time = time.time()
-    active = True
+    print(f"Mouse activity detected at ({x}, {y})")
+    if ser:
+        ser.write(b'A')  # Send an activity signal to the serial port
 
+# Function to handle keyboard activity
 def on_key_press(key):
-    on_activity(None, None)
+    print(f"Keyboard activity detected: {key}")
+    if ser:
+        ser.write(b'A')  # Send an activity signal to the serial port
 
-# Listener for mouse and keyboard activity
-mouse_listener = mouse.Listener(on_click=on_activity, on_scroll=on_activity)
+# Set up mouse and keyboard listeners
+mouse_listener = mouse.Listener(on_click=on_activity)
 keyboard_listener = keyboard.Listener(on_press=on_key_press)
 
+# Start listeners
 mouse_listener.start()
 keyboard_listener.start()
 
+# Break timer setup
+break_interval = 300  # 5 minutes in seconds
+last_activity_time = time.time()
+
 try:
     while True:
-        # Check if it's time for a break
-        current_time = time.time()
-        if current_time - last_activity_time >= BREAK_INTERVAL:
-            ser.write(b'B')  # Send break signal to Arduino
-            active = False
-            print("Time for a break! Sent signal to Arduino.")
-
-        # Reset active status if no activity for a while
-        if not active:
-            print("No activity detected. Checking again...")
-
-        time.sleep(check_interval)  # Check for activity every few seconds
+        time.sleep(1)
+        # Check if break interval has elapsed
+        if time.time() - last_activity_time > break_interval:
+            if ser:
+                ser.write(b'B')  # Send a break signal to the serial port
+                print("Break signal sent.")
+            last_activity_time = time.time()  # Reset the timer
 
 except KeyboardInterrupt:
-    print("Tracking stopped.")
-
+    print("Exiting the activity tracker...")
 finally:
     mouse_listener.stop()
     keyboard_listener.stop()
-    ser.close()
+    if ser:
+        ser.close()

@@ -4,18 +4,27 @@ from unittest.mock import patch, MagicMock
 import serial  # Ensure pyserial is installed
 
 # Assuming activity_tracker is the name of your module containing the activity_tracker code
-from activity_tracker import on_activity
+from activity_tracker import on_activity, on_key_press
 
 class TestActivityTracker(unittest.TestCase):
 
     @patch('serial.Serial')
-    def test_activity_tracking(self, mock_serial):
+    def test_activity_tracking_mouse(self, mock_serial):
         # Mock the serial connection
         mock_serial.return_value = MagicMock()
 
         # Simulate user activity
         on_activity(100, 100)  # Simulate mouse click activity
         self.assertTrue(mock_serial.return_value.write.called, "The serial write should be called on activity")
+
+    @patch('serial.Serial')
+    def test_activity_tracking_keyboard(self, mock_serial):
+        # Mock the serial connection
+        mock_serial.return_value = MagicMock()
+
+        # Simulate user keyboard activity
+        on_key_press('a')  # Simulate key press activity
+        self.assertTrue(mock_serial.return_value.write.called, "The serial write should be called on keyboard activity")
 
     def test_break_timer(self):
         # Test the break timer logic

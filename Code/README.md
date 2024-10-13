@@ -7,7 +7,7 @@ This folder contains the main code files for the **ActiveBreaks** project, a use
 ### 1. ActiveBreaks.ino
 
 **Description**:  
-This is the Arduino sketch that runs on the microcontroller (e.g., Arduino Mega 2560). It controls the hardware components responsible for providing reminders to the user to take breaks. 
+This is the Arduino sketch that runs on the microcontroller (e.g., Arduino Mega 2560). It controls the hardware components responsible for providing reminders to the user to take breaks.
 
 **Key Functions**:
 - **Setup**: Initializes the serial communication and sets up the output pins for LEDs and buzzers.
@@ -17,7 +17,42 @@ This is the Arduino sketch that runs on the microcontroller (e.g., Arduino Mega 
 **Usage**:  
 Upload this sketch to your Arduino board using the Arduino IDE. Make sure to connect the appropriate hardware components to the defined pins.
 
-### 2. activity_tracker.py
+### 2. ActiveBreaks-A-B-K.ino
+
+**Description**:  
+This Arduino sketch implements an advanced version of the ActiveBreaks project, potentially integrating more sophisticated functionalities for break reminders.
+
+**Key Functions**:
+- Similar structure to `ActiveBreaks.ino`, with enhancements that may include additional configurations or control flows.
+
+**Usage**:  
+Upload this code to the Arduino for a more refined break reminder experience.
+
+### 3. ActiveBreaks_202020.ino
+
+**Description**:  
+This sketch focuses on the 20-20-20 rule, encouraging users to take breaks every 20 minutes by looking away from screens.
+
+**Usage**:  
+Deploy this to provide targeted eye health reminders.
+
+### 4. ActiveBreaks_TestingHardware.ino
+
+**Description**:  
+This sketch is specifically designed for testing the hardware components, ensuring that LEDs, buzzers, and buttons function correctly.
+
+**Usage**:  
+Use this during the initial setup to troubleshoot hardware connections.
+
+### 5. ArduinoAcknowledge.ino
+
+**Description**:  
+This file manages serial communication between the Arduino and computer, ensuring the Arduino acknowledges commands sent from a Python application.
+
+**Usage**:  
+Upload when building systems requiring command acknowledgment.
+
+### 6. activity_tracker.py
 
 **Description**:  
 This Python script runs on the user's computer and monitors keyboard and mouse activity. It tracks how long the user has been active and sends break reminders based on the defined intervals.
@@ -30,7 +65,7 @@ This Python script runs on the user's computer and monitors keyboard and mouse a
 **Usage**:  
 Run this script in your Python environment. Ensure that you have installed the required libraries (`pynput`, `pyserial`). Connect the Arduino to the computer and ensure that the serial port matches the one specified in the script.
 
-### 3. test_scenarios.py
+### 7. test_scenarios.py
 
 **Description**:  
 This file contains unit tests for the `activity_tracker.py` script. It ensures that the activity monitoring and break reminder functionalities work as intended.
@@ -42,6 +77,14 @@ This file contains unit tests for the `activity_tracker.py` script. It ensures t
 
 **Usage**:  
 Run this script using the command `python -m unittest test_scenarios.py`. Ensure that all dependencies are installed, and the `activity_tracker.py` file is accessible.
+
+### 8. TestingSerialCom.py
+
+**Description**:  
+This Python script tests the serial communication between a computer and the Arduino. It sends commands and receives data to ensure the connection is stable.
+
+**Usage**:  
+Execute this script to validate that the Arduino receives and processes commands correctly.
 
 ## Conclusion
 

@@ -3,6 +3,8 @@ import time
 from unittest.mock import patch, MagicMock
 import serial  # Ensure pyserial is installed
 
+# python -m unittest test_scenarios.py to run the script
+
 # Assuming activity_tracker is the name of your module containing the activity_tracker code
 from activity_tracker import on_activity, on_key_press
 

@@ -50,7 +50,6 @@ This guide outlines the steps to set up and run the **ActiveBreaks** project usi
 5. **Upload the Code**:
    - Click the upload button (right arrow icon) to compile and upload the sketch to the Arduino.
 
-### Step 3: Set Up th![IMG_0548](https://github.com/user-attachments/assets/062b5327-a61b-42f8-93b5-7a1fe4b8e71d)
 e Python Application
 
 1. **Install Required Libraries**:

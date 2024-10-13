@@ -30,8 +30,8 @@ This guide outlines the steps to set up and run the **ActiveBreaks** project usi
    - Connect the buzzer to digital pin 12.
    - Connect the push button to digital pin 2 (using a pull-up resistor configuration).
 
-   ![Circuit Diagram](path_to_your_circuit_diagram.png)  
-   *(Replace with the actual path to your circuit diagram image.)*
+![IMG_0548](https://github.com/user-attachments/assets/d9f831fe-efb8-42a0-bfa4-258bce142c9f)
+
 
 ### Step 2: Upload Arduino Code
 
@@ -50,7 +50,8 @@ This guide outlines the steps to set up and run the **ActiveBreaks** project usi
 5. **Upload the Code**:
    - Click the upload button (right arrow icon) to compile and upload the sketch to the Arduino.
 
-### Step 3: Set Up the Python Application
+### Step 3: Set Up th![IMG_0548](https://github.com/user-attachments/assets/062b5327-a61b-42f8-93b5-7a1fe4b8e71d)
+e Python Application
 
 1. **Install Required Libraries**:
    - Open a terminal or command prompt and run the following commands:

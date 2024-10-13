@@ -1,4 +1,4 @@
-# Final Project Implementation Guide
+# Final Project Draft Implementation Guide
 
 This guide outlines the steps to set up and run the **ActiveBreaks** project using the finalized code files: **`ActiveBreaks_202020.ino`** for the Arduino and **`activity_tracker.py`** for the Python application.
 

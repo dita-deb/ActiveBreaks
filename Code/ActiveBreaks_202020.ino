@@ -69,6 +69,7 @@
 // }
 
 #include <Arduino.h>
+#include <Keyboard.h> // Include the Keyboard library
 
 const int ledPin = 13;         // Pin connected to the LED
 const int buzzerPin = 12;      // Pin connected to the buzzer
@@ -94,9 +95,9 @@ void loop() {
         Serial.print("Received: ");
         Serial.println(incomingByte);
 
-        // Example: Trigger break if 'K' is received (keyboard activity)
-        if (incomingByte == 'K') {
-            lastActivityTime = millis(); // Reset activity time on key press
+        // Trigger break if 'C' is received to indicate CTRL + K pressed
+        if (incomingByte == 'C') {
+            lastActivityTime = millis(); // Reset activity time on CTRL + K press
         }
     }
 

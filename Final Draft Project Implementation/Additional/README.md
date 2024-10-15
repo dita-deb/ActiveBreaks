@@ -20,3 +20,6 @@
 ## Conclusion
 The original files had limitations in user interaction, timer functionality, integration, and code complexity. Addressing these issues by incorporating keyboard input, enhancing timer features, and integrating functionalities would better align with your evolving preferences for a more interactive and responsive system.
 
+# Additonal Files Note
+
+## These additional files show a very rudimentary version of the alarm system. '0Reset.ino' file works. The integration to the python script in the works.

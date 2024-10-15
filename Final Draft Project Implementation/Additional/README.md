@@ -22,4 +22,4 @@ The original files had limitations in user interaction, timer functionality, int
 
 # Additonal Files Note
 
-## These additional files show a very rudimentary version of the alarm system. '0Reset.ino' file works. The integration to the python script in the works.
+These additional files show a very rudimentary version of the alarm system. 'ActiveBreaks_reset_timer.ino' file works.The integration to the Python script is in the works.

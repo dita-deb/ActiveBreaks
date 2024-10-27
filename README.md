@@ -1,3 +1,20 @@
+# NOTES:
+This is part of a submission for IEEE Technothon 2024: transforming industries through automation and innovation.
+link: https://ieee-technothon-2024.devpost.com/
+
+## Requirements:
+- What to Build
+  - Participants build innovative hardware solutions using AI/ML and other automation. 
+
+- What to Submit
+  - Participants have two options to submit:
+
+    1. Submit a 5-minute video that includes the problem you are tackling, the solution, the pros and cons, and the hardware implementation demo. The submission should be in VIDEO format and be 5 minutes max. The participants would then play this video at the judging event, where the judges would review it and ask questions, if any.
+
+    2. Submit a presentation slide deck (5 slides max) that includes the problem you are tackling, the solution, pros and cons, and the hardware implementation demo. The demo should be a video embedded onto the slide deck (as a YouTube embed). The participants then present these slides at the judging event (5 min max) and the judges would review them and ask questions, if any.
+
+--------
+
 # ActiveBreaks
 A user-friendly tool that encourages regular breaks while effectively monitoring focus time to promote healthy work habits. It combines software with hardware to automate reminders, ensuring users maintain productivity without compromising health.
 
@@ -42,18 +59,4 @@ A user-friendly tool that encourages regular breaks while effectively monitoring
       - LED turns on or the buzzer beeps to indicate break time.
       - User can press a button to snooze the reminder (if implemented).
     - Optional Cloud Integration: Use an ESP32 with Wi-Fi to send break statistics to a web interface or dashboard.
---------
-# NOTES:
-This is part of a submission for IEEE Technothon 2024: transforming industries through automation and innovation.
-
-## Requirements:
-- What to Build
-  - Participants build innovative hardware solutions using AI/ML and other automation. 
-
-- What to Submit
-  - Participants have two options to submit:
-
-    1. Submit a 5-minute video that includes the problem you are tackling, the solution, the pros and cons, and the hardware implementation demo. The submission should be in VIDEO format and be 5 minutes max. The participants would then play this video at the judging event, where the judges would review it and ask questions, if any.
-
-    2. Submit a presentation slide deck (5 slides max) that includes the problem you are tackling, the solution, pros and cons, and the hardware implementation demo. The demo should be a video embedded onto the slide deck (as a YouTube embed). The participants then present these slides at the judging event (5 min max) and the judges would review them and ask questions, if any.
 
